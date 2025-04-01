@@ -1,15 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
+// src/App.tsx
+import { Outlet } from '@tanstack/react-router'
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<div />} />
-      </Routes>
-    </Router>
-  );
-};
+    <div>
+      <h1>Konvo</h1>
+      <Outlet />
+    </div>
+  )
+}
 
-export default App;
+export default App
